@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<style>
+body {margin:0;font-family:Arial;background:#111;color:white;}
+
+.bg-wrap{position:absolute;top:0;left:0;width:100%;height:220px;overflow:hidden;z-index:-1;}
+.bg-wrap img{width:100%;height:100%;object-fit:cover;}
+.bg-fade{position:absolute;bottom:0;width:100%;height:100px;background:linear-gradient(to bottom,transparent,#111);}
+
+.header{text-align:center;padding:20px;}
+.profile-img{width:100px;height:100px;border-radius:50%;border:3px solid #00c300;object-fit:cover;}
+.name{font-size:22px;margin-top:10px;}
+
+.content{padding:10px;}
+
+.post{background:#1a1a1a;border-radius:12px;margin:15px auto;padding:10px;max-width:350px;}
+
+.slider{display:flex;overflow-x:auto;gap:10px;scroll-snap-type:x mandatory;}
+.slider img{width:100%;border-radius:10px;flex-shrink:0;scroll-snap-align:center;}
+
+.caption{margin-top:8px;font-size:14px;}
+
+.actions{display:flex;gap:15px;margin-top:8px;font-size:18px;}
+.action{cursor:pointer;color:white;user-select:none;}
+.action.active.like{color:red;}
+.action.active.repost{color:#00c300;}
+
+.stats{font-size:13px;color:#aaa;margin-top:3px;}
+
+.comment{font-size:13px;margin-top:5px;}
+.comment-name{font-weight:bold;color:#fff;}
+.comment-text{color:#aaa;margin-left:5px;}
+</style>
+</head>
+<body>
+
+<div class="bg-wrap">
+<img src="https://i.pinimg.com/originals/7d/07/a2/7d07a255678962d30d8717dcf5dbd266.gif">
+<div class="bg-fade"></div>
+</div>
+
+<div class="header">
+<img class="profile-img" src="https://i.postimg.cc/MHMYx07M/TA-2026-04-04-14-18-57-(artist-ma-1355074756.png">
+<div class="name">ลีออนรักเมีย</div>
+</div>
+
+<div class="content">
+
+<!-- Post 1 -->
+<div class="post">
+<div class="slider">
+<img src="https://i.postimg.cc/HLVrxHS6/ad6031d9d390662fd70b3ddc1df32d64.jpg">
+<img src="https://i.postimg.cc/dVm0V3mN/ff2eba32-3aac-4c65-b077-a6c62a8335cd.png">
+</div>
+<div class="caption">เมียสวยมีชัยไปกว่าครึ่ง</div>
+
+<div class="actions">
+<span class="action like" onclick="toggle(this,'like')">❤</span>
+<span class="action">💬</span>
+<span class="action repost" onclick="toggle(this,'repost')">🔁</span>
+</div>
+
+<div class="stats">❤️ 12.4K &nbsp; 💬 3.1K &nbsp; 🔁 1.2K</div>
+
+<div class="comment"><span class="comment-name">ฝันร้ายแรงค์แกรน</span><span class="comment-text">โคตรสวยหมายถึงเมียพี่</span></div>
+<div class="comment"><span class="comment-name">แว่นอย่าทิ้งเค้า</span><span class="comment-text">ฟิลกู๊ล</span></div>
+</div>
+
+<!-- Post 2 -->
+<div class="post">
+<img src="https://i.postimg.cc/QxhV7c4w/TA-2026-04-04-15-27-30-(artist-ma-4124223429.png">
+<div class="caption">เมียถ่าย</div>
+
+<div class="actions">
+<span class="action like" onclick="toggle(this,'like')">❤</span>
+<span class="action">💬</span>
+<span class="action repost" onclick="toggle(this,'repost')">🔁</span>
+</div>
+
+<div class="stats">❤️ 8.7K &nbsp; 💬 1.9K &nbsp; 🔁 900</div>
+
+<div class="comment"><span class="comment-name">ทำไมไม่ตั้งไอซ์วอ</span><span class="comment-text">ทำไมไม่เห้นพี่ที่โรงเรียน</span></div>
+<div class="comment"><span class="comment-name">แฟนพี่ลีออนน่ารักที่สุดในโลก</span><span class="comment-text">เต็มสิให้เจ็ด เจ้ดว่าดัด</span></div>
+</div>
+
+</div>
+
+<script>
+function toggle(el,type){
+el.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
